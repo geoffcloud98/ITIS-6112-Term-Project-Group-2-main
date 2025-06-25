@@ -1,0 +1,127 @@
+/* General Layout */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Header Container */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 80px;
+}
+
+/* Header Title */
+h1 {
+    font-size: 36px;
+    color: #005035;
+    margin: 0;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+/* Positioning the logo */
+#logo {
+    max-width: 80px;
+    height: auto;
+}
+
+/* Style for Filters and Search Container (Sidebar) */
+.filters-search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 120px;
+    left: 0;
+    width: 220px;
+    height: calc(100vh - 140px);
+    overflow-y: auto; 
+}
+
+/* Filters Container */
+.filters-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Style for Search Bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Style for the search input */
+#searchBar {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Style for the select dropdown */
+select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+/* Grouping container for filters */
+.filter-group {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Legend styling (group titles) */
+.filter-group legend {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0 8px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Map container */
+#map {
+    margin-top: 53px;
+    margin-left: 262px; 
+    width: calc(100% - 262px);
+    height: calc(100vh - 80px);
+    background-color: #eaeaea;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Ensure the map container fits well within the page */
+html, body {
+    height: 100%;
+    margin: 0;
+}

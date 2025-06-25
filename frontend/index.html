@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecklenburg County Park and Greenway Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+</head>
+
+<body>
+    <!-- Header with Logo -->
+    <div class="header-container">
+    <img src="logo.png" alt="Logo" id="logo">
+    <h1>Mecklenburg County Park and Greenway Explorer</h1>
+    </div>
+
+    <!-- Description Section -->
+    <div class="description-container">
+        <p>Welcome to the Mecklenburg County Park and Greenway Explorer!
+        This app helps you explore various parks and greenway trails in Mecklenburg County, NC.
+        You can find detailed information about trail entrances, mile markers, and trail routes directly on the map.
+        Start exploring today!</p>
+    </div>
+
+    <!-- Filters and Search Bar Container -->
+    <div class="filters-search-container">
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search name..." />
+        </div>
+
+        <!-- General Filters -->
+        <fieldset class="filter-group">
+            <legend>General</legend>
+            <div class="filters-container">
+                <label for="dataLayerSelect">Choose Data Layer:</label>
+                <select id="dataLayerSelect">
+                    <option value="entrances">Entrances</option>
+                    <option value="milemarkers">Mile Markers</option>
+                    <option value="trails">Trails</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <!-- Global Location Filter -->
+        <fieldset class="filter-group">
+            <legend>Nearby Search</legend>
+            <div class="filters-container">
+                <label for="locationInput">Enter Address:</label>
+                <input type="text" id="locationInput" placeholder="9201 University City Blvd">
+            </div>
+
+            <div class="filters-container">
+                <label for="radiusInput">Radius (miles):</label>
+                <input type="number" id="radiusInput" value="2" min="0.1" step="0.1">
+            </div>
+
+            <div class="filters-container">
+                <button id="locationSearchBtn">Find Nearby Features</button>
+            </div>
+        </fieldset>
+
+        <!-- Trail Filters -->
+        <fieldset id="trailFilters" class="filter-group">
+            <legend>Trail Filters</legend>
+            <div class="filters-container">
+                <label for="trailSurfaceSelect">Trail Surface:</label>
+                <select id="trailSurfaceSelect">
+                    <option value="">Any</option>
+                </select>
+            </div>
+
+            <div class="filters-container">
+                <label for="trailTypeSelect">Trail Type:</label>
+                <select id="trailTypeSelect">
+                    <option value="">Any</option>
+                </select>
+            </div>
+
+            <div class="filters-container">
+                <label for="trailOwnerSelect">Trail Owner:</label>
+                <select id="trailOwnerSelect">
+                    <option value="">Any</option>
+                </select>
+            </div>
+
+            <div class="filters-container">
+                <label for="distanceMin">Min Distance (miles):</label>
+                <input type="number" id="distanceMin" min="0" step="0.1">
+            </div>
+
+            <div class="filters-container">
+                <label for="distanceMax">Max Distance (miles):</label>
+                <input type="number" id="distanceMax" min="0" step="0.1">
+            </div>
+        </fieldset>
+
+        <!-- Mile Marker Filters -->
+        <fieldset id="mileMarkerFilters" class="filter-group">
+            <legend>Mile Marker Filters</legend>
+            <div class="filters-container">
+                <label for="installedSelect">Installed:</label>
+                <select id="installedSelect">
+                    <option value="">Any</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <!-- Entrance Filters -->
+        <fieldset id="entranceFilters" class="filter-group">
+            <legend>Entrance Filters</legend>
+            <div class="filters-container">
+                <label for="accessTypeSelect">Access Type:</label>
+                <select id="accessTypeSelect">
+                    <option value="">Any</option>
+                </select>
+            </div>
+
+            <div class="filters-container">
+                <label for="entranceTypeSelect">Entrance Type:</label>
+                <select id="entranceTypeSelect">
+                    <option value="">Any</option>
+                </select>
+            </div>
+
+            <div class="filters-container">
+                <label for="regionSelect">Region:</label>
+                <select id="regionSelect">
+                    <option value="">Any</option>
+                </select>
+            </div>
+        </fieldset>
+
+    </div>
+
+    <!-- Map Container -->
+    <div id="map"></div>
+
+    <div id="entrances-list" style="display:none"></div>
+    <div id="milemarkers-list" style="display:none"></div>
+    <div id="trails-list" style="display:none"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-ajax/dist/leaflet.ajax.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
