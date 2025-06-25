@@ -137,10 +137,11 @@ app.get('/api/sync-trails', async (req, res) => {
 
                 const query = `
                         INSERT INTO trails (trail_id, geom, properties)
-                        VALUES ($1, ST_SetSRID(ST_GeomFromGeoJSON($2), 4326), $3)
+                        VALUES ($1, ST_SetSRID(ST_LineMerge(ST_GeomFromGeoJSON($2)), 4326), $3)
                         ON CONFLICT (trail_id) DO UPDATE SET
                             geom = EXCLUDED.geom,
                             properties = EXCLUDED.properties;
+
                         `;
 
 
