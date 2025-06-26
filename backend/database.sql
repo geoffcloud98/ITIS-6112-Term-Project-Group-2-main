@@ -2,11 +2,12 @@
 CREATE EXTENSION IF NOT EXISTS postgis;
 
 -- Table: trails
-CREATE TABLE IF NOT EXISTS trails (
+CREATE TABLE trails (
     trail_id INTEGER PRIMARY KEY,
-    geom GEOMETRY(LineString, 4326),
+    geom GEOMETRY(MultiLineString, 4326),
     properties JSONB
 );
+
 
 -- Table: entrances
 CREATE TABLE IF NOT EXISTS entrances (
