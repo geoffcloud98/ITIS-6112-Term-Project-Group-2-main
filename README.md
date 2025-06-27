@@ -9,8 +9,9 @@ This project is a web-based interactive mapping application built to visualize a
 
 The backend is built with Node.js and Express.js, and integrates OpenStreetMap (via Nominatim API) and ArcGIS REST services to provide geocoding and real-time data. This tool helps residents, outdoor enthusiasts, and tourists navigate the county’s trail, park, and greenway networks with ease.
 
-This link will bring you to the web app: [Open Mapping Application](http://159.65.190.244:3000/)
-
+<h4>Links</h4>
+[Mapping Application](http://159.65.190.244:3000/)
+[Project Report](https://docs.google.com/document/d/1vkGTQSkREv0tr_6T0A1uZsOoI6HYsVyL/edit?usp=sharing&ouid=112011954964715598772&rtpof=true&sd=true)
 
 
 
@@ -19,25 +20,25 @@ This link will bring you to the web app: [Open Mapping Application](http://159.6
 <h3>Frontend</h3>
 <p>The frontend is responsible for the user interface and interacting with backend services. It includes the following components:</p>
 
-<h4>Map Display and Interactivity</h4>
+Map Display and Interactivity
 <ul>
   <li>Displays the map and renders geospatial data (entrances, mile markers, trails) using <code>Leaflet.js</code>.</li>
   <li>Supports interactions such as zoom, pan, and click events to show feature details.</li>
 </ul>
 
-<h4>Filters and Search Functionality</h4>
+Filters and Search Functionality
 <ul>
   <li>Provides filtering for features based on user-selected attributes (e.g., access type, trail surface, installation status).</li>
   <li>Includes a search bar for filtering map items by name.</li>
 </ul>
 
-<h4>Address Search & Radius Filter</h4>
+Address Search & Radius Filter
 <ul>
   <li>Uses <code>OpenStreetMap's Nominatim API</code> to geocode user input into latitude and longitude.</li>
   <li>Allows users to define a radius for locating nearby features (entrances, mile markers, trails).</li>
 </ul>
 
-<h4>Dynamic Map Updates</h4>
+Dynamic Map Updates
 <ul>
   <li>Applies filters and search inputs to dynamically update visible map features in real time.</li>
 </ul>
@@ -45,33 +46,33 @@ This link will bring you to the web app: [Open Mapping Application](http://159.6
 <h3>Backend</h3>
 <p>The backend handles data processing, storage, and serves geospatial information to the frontend. It includes:</p>
 
-<h4>External Services and APIs</h4>
+External Services and APIs
 <ul>
   <li><strong>ArcGIS REST API</strong>: Queries Mecklenburg County’s API to retrieve trails, entrances, and mile markers.</li>
   <li><strong>OpenStreetMap (Nominatim API)</strong>: Geocodes user-entered addresses into geographic coordinates for spatial filtering.</li>
 </ul>
 
-<h4>API Endpoints for Data Sync</h4>
+API Endpoints for Data Sync
 <ul>
   <li>Fetches and synchronizes geospatial data (entrances, mile markers, trails) from external GIS services to the database.</li>
 </ul>
 
-<h4>Database Management</h4>
+Database Management
 <ul>
   <li>Uses <code>PostgreSQL</code> with the <code>PostGIS</code> extension to store and manage spatial data.</li>
 </ul>
 
-<h4>Data Access API</h4>
+Data Access API
 <ul>
   <li>Provides RESTful endpoints to retrieve spatial features for map rendering and interaction.</li>
 </ul>
 
-<h4>Geometry Handling and Validation</h4>
+Geometry Handling and Validation
 <ul>
   <li>Validates and transforms geometries (e.g., <code>LineString</code>, <code>MultiLineString</code>) using PostGIS functions to ensure data consistency.</li>
 </ul>
 
-<h4>Server and Connection Management</h4>
+Server and Connection Management
 <ul>
   <li>Manages HTTP requests via <code>Express.js</code> and handles database connections using the <code>pg</code> library.</li>
 </ul>
