@@ -9,7 +9,7 @@ This project is a web-based interactive mapping application built to visualize a
 
 The backend is built with Node.js and Express.js, and integrates OpenStreetMap (via Nominatim API) and ArcGIS REST services to provide geocoding and real-time data. This tool helps residents, outdoor enthusiasts, and tourists navigate the county’s trail, park, and greenway networks with ease.
 
-<h4>Links</h4>
+<h3>Links</h3>
 
 [Mapping Application](http://159.65.190.244:3000/)
 
