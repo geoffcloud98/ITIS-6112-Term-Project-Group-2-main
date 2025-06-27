@@ -11,7 +11,7 @@ The backend is built with Node.js and Express.js, and integrates OpenStreetMap (
 
 <h3>Links</h3>
 
-[Mapping Application](http://159.65.190.244:3000/)
+[Mecklenburg County Park & Greenway Explorer](http://159.65.190.244:3000/)
 
 [Project Report](https://docs.google.com/document/d/1vkGTQSkREv0tr_6T0A1uZsOoI6HYsVyL/edit?usp=sharing&ouid=112011954964715598772&rtpof=true&sd=true)
 
