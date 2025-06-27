@@ -78,3 +78,11 @@ Server and Connection Management
 <ul>
   <li>Manages HTTP requests via <code>Express.js</code> and handles database connections using the <code>pg</code> library.</li>
 </ul>
+
+<h3>Database</h3>
+<p>The application uses <strong>PostgreSQL</strong> as its primary relational database, storing all data within the <code>Charlotte_Parks_And_Greenways</code> database.</p>
+<p>The database is extended with <strong>PostGIS</strong> to support advanced geospatial data types and spatial queries.</p>
+<ul>
+  <li>Spatial columns store geometry data such as <code>LineString</code> and <code>MultiLineString</code> types, representing paths and areas on the map.</li>
+  <li><code>JSONB</code> columns store flexible, structured properties and metadata for each geographic feature, enabling effective management of both spatial and descriptive information.</li>
+</ul>
